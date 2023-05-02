@@ -53,10 +53,14 @@ class Graph:
     self._validate_vertex(w)
     inc_v = self.incident_edges(v)
     inc_w = self.incident_edges(w)
-    
-    # TODO: Implement here ...
-    
-    return None
+
+    is_adjacent = False
+
+    for edge in inc_v:
+      if inc_w.__contains__(edge):
+        is_adjacent = True
+
+    return is_adjacent
 
   def insert_vertex(self, element):
     v = self._graph.insert_vertex(element)
