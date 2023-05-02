@@ -46,13 +46,7 @@ class Graph:
     self._validate_vertex(v)
     self._validate_edge(e)
 
-    # TODO: Implement here ...
-
-    v1, v2 = self.end_vertices(e)
-
-    # when vertex U is passed, with edge a return v
-    
-    return v2
+    return self.end_vertices(e)[1]
     
   def are_adjacent(self, v, w):
     self._validate_vertex(v)
