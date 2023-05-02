@@ -1,0 +1,14 @@
+a) Der Graph hat 10’000 Knoten und 20’000 Kanten und es ist wichtig so wenig Platz wie
+möglich zu verwenden.
+--Hier würde man eine Adjazenz-Liste verwenden, da diese Liste nur Kanten speichert, welche wirklich vorhanden sind. 
+  Somit werden keine 20'000 Kanten gespeichert, wie bei der Adjazenz-Matrix.
+
+b) Der Graph hat 10’000 Knoten und 20'000'000 Kanten und es ist wichtig, dass das
+Löschen von Knoten so schnell wie möglich ist.
+--Hier würde man auch eine Adjazenz-Liste verwenden, da diese Liste nur eine Komplexität von deg(v) hat bzw. schneller ist.
+  Eine Adjazenz-Matrix hat eine Komplexität von O(n^2) und ist somit langsamer.
+
+c) Es ist wichtig die Anfrage auf Nachbarschaft so schnell wie möglich zu beantworten. Der
+verwendete Platz spielt keine Rolle. 
+--Hier ist eine Adjazenz-Matrix passender, da das Prüfen ob ein Knoten V einen Nachbarknoten W hat bzw. eine Kante hat, 
+  eine Komplexität von O(1) beträgt und damit schneller ist. 
